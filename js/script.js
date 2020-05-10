@@ -60,13 +60,17 @@ window.addEventListener("load", function () {
         var userLength = users.length;
 
         for (var i = 0; i < userLength; i++) {
-            resultsHtml += '<div class="person-row">\
-                                <img src="images/' + users[i].avatar + '" />\
-                                <div class="person-info">\
-                                <div>' + users[i].name + '</div>\
-                                <div>' + users[i].hobby + '</div>\
-                            </div>\
-                            <button > Add as friend </button> </div>';
+            if (gender == "A" || gender == users[i].gender) {
+                if (hobby == "" || hobby == users[i].hobby) {
+                    resultsHtml += '<div class="person-row">\
+                                        <img src="images/' + users[i].avatar + '" />\
+                                        <div class="person-info">\
+                                        <div>' + users[i].name + '</div>\
+                                        <div>' + users[i].hobby + '</div>\
+                                    </div>\
+                                    <button > Add as friend </button> </div>';
+                }
+            }
         }
 
         results.innerHTML = resultsHtml;
