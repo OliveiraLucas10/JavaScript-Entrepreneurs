@@ -1,1 +1,1 @@
-# JavaScript-Entrepreneurs-
+# Programming for Entrepreneurs - JavaScript
